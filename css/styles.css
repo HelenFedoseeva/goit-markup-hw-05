@@ -117,6 +117,7 @@ body {
 .header-list-item-link:hover,
 .header-list-item-link:focus{
     color: var(--focus-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts{
@@ -142,11 +143,13 @@ body {
 .contacts-item-link:hover ,
 .contacts-item-link:focus {
     color: var(--focus-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 
 .contacts-item-link:hover .icon-envelope-item{
     fill: var(--focus-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -181,7 +184,10 @@ body {
 .contacts-item-link:hover .icon-contact-item,
 .contacts-item-link:focus .icon-contact-item{
     fill: var(--focus-color);
-}.smartphone{
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.smartphone{
     width: 10px;
     height: 16px;
 }
@@ -236,6 +242,7 @@ body {
 .icon-background-team:focus {
     background-color: var(--focus-color);
     color: #fff;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -275,6 +282,7 @@ body {
 .main-portfolio-list-link:hover,
 .main-portfolio-list-link:focus{
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-description-section{
@@ -321,6 +329,7 @@ body {
 .model-button:hover,
 .model-button:focus{
     background-color: var(--model-button);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*--------------------------MODAL-OPEN--------------------------------*/
@@ -371,7 +380,9 @@ body {
 }
 
 .close-modal-icon{
-    color: #000;
+   width: 18px;
+   height: 18px;
+   fill: currentColor;
     
 }
 
@@ -508,6 +519,7 @@ body {
     background-color: var(--focus-color);
     color: #fff;
     box-shadow: 0px 4px 4px #00000025;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-title{
     font-weight: 700;
@@ -569,6 +581,7 @@ body {
 .clients-list-link:focus {
     color: var(--focus-color);
     border-color: var(--focus-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
@@ -618,6 +631,7 @@ body {
 .list-item:hover,
 .list-item:focus{
     color: var(--focus-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -664,6 +678,7 @@ body {
 .media-footer-link:hover,
 .media-footer-link:focus {
     background-color: var(--focus-color);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-media-footer {
