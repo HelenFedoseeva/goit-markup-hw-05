@@ -55,7 +55,7 @@ body {
     cursor: pointer;
 }
 
-/*--------Оболочка----------*/
+/*--------------------------------------ОБОЛОЧКА-УТИЛИТА-----------------------------------------------------------*/
 .container{
     width: 1200px;
     padding: 0px 15px;
@@ -83,7 +83,7 @@ body {
     background-color: var(--focus-color);
     border-radius: 2px;
 }
-/*-----Header-----*/
+/*------------------------------------------------------Header-------------------------------------*/
 .header {
     border-bottom: 1px solid var(--border-line-color);
 }
@@ -116,6 +116,7 @@ body {
 }
 .header-list-item{
     position: relative;
+    
 }
 
 
@@ -128,13 +129,14 @@ body {
     padding: 32px 0;
     color: var(--basic-color);
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .header-list-item-link:hover,
 .header-list-item-link:focus{
     color: var(--focus-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .header-contacts{
@@ -155,18 +157,20 @@ body {
     color: var(--contact-color);
     text-decoration: none;  
     padding: 32px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-item-link:hover ,
 .contacts-item-link:focus {
     color: var(--focus-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
    
 }
-
+.icon-envelope-item{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .contacts-item-link:hover .icon-envelope-item{
     fill: var(--focus-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -196,12 +200,14 @@ body {
     width: 16px;
     height: 12px;
 
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
 }
 .contacts-item-link:hover .icon-contact-item,
 .contacts-item-link:focus .icon-contact-item{
     fill: var(--focus-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .smartphone{
@@ -253,13 +259,15 @@ body {
     justify-content: center;
     border-radius: 50%;
     color: var(--icon-border-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-background-team:hover,
 .icon-background-team:focus {
     background-color: var(--focus-color);
     color: #fff;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 
@@ -295,11 +303,46 @@ body {
 
 .main-portfolio-list-link{
     display: block;
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-portfolio-list-link:hover,
 .main-portfolio-list-link:focus{
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.main-portfolio-overlay-container:hover .main-portfolio-overlay,
+.main-portfolio-overlay-container:focus .main-portfolio-overlay {
+    transform: translateY(0%);
+       
+}
+.main-portfolio-overlay-container{
+    position: relative;
+    overflow: hidden;
+
+}
+.main-portfolio-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+    
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: #fff;
+    background-color: rgba(33, 150, 243, 0.9);
+    overflow: auto;
+
+    padding: 63px 24px;
+    
 }
 
 .portfolio-description-section{
@@ -341,12 +384,14 @@ body {
     border-radius: 4px;
     text-align: center;
 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .model-button:hover,
 .model-button:focus{
     background-color: var(--model-button);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
 }
 
 /*--------------------------MODAL-OPEN--------------------------------*/
@@ -473,6 +518,35 @@ body {
     margin-right: 30px;
     
 }
+
+.example-img-item{
+    position: relative;
+}
+
+.example-text{
+    position: absolute;
+    left:0;
+    top: 100%;
+    transform: translateY(-100%);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+
+    background-color: rgba(47, 48, 58, 0.8);
+
+    min-height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .team-section{
     background-color: #F5F4FA;
     
@@ -542,6 +616,8 @@ body {
     padding-bottom: 6px;
     padding-right: 22px;
     padding-left: 22px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-main-button:hover,
@@ -549,7 +625,7 @@ body {
     background-color: var(--focus-color);
     color: #fff;
     box-shadow: 0px 4px 4px #00000025;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .portfolio-title{
     font-weight: 700;
@@ -605,13 +681,15 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--icon-border-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-link:hover,
 .clients-list-link:focus {
     color: var(--focus-color);
     border-color: var(--focus-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .clients-icon {
@@ -656,12 +734,14 @@ body {
 .list-item{
     text-decoration: none;
     color: #ffffff99;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-item:hover,
 .list-item:focus{
     color: var(--focus-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 
@@ -704,11 +784,13 @@ body {
     height: 44px;
     align-items: center;
     justify-content: center;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .media-footer-link:hover,
 .media-footer-link:focus {
     background-color: var(--focus-color);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
 }
 
 .icon-media-footer {
