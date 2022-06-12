@@ -70,6 +70,7 @@ body {
     padding: 94px 0;
 }
 
+
 .current-page::after{
     content: "";
 
@@ -82,6 +83,7 @@ body {
     height: 4px;
     background-color: var(--focus-color);
     border-radius: 2px;
+   
 }
 /*------------------------------------------------------Header-------------------------------------*/
 .header {
@@ -132,6 +134,10 @@ body {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.current-page {
+    color: #2196F3;
+
+}
 
 .header-list-item-link:hover,
 .header-list-item-link:focus{
@@ -260,7 +266,7 @@ body {
     border-radius: 50%;
     color: var(--icon-border-color);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-background-team:hover,
@@ -303,6 +309,7 @@ body {
 
 .main-portfolio-list-link{
     display: block;
+    text-decoration: none;
 
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -310,13 +317,14 @@ body {
 .main-portfolio-list-link:focus{
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.25);
     
+    
 }
 
-.main-portfolio-overlay-container:hover .main-portfolio-overlay,
-.main-portfolio-overlay-container:focus .main-portfolio-overlay {
+.main-portfolio-list-link:hover .main-portfolio-overlay,
+.main-portfolio-list-link:focus .main-portfolio-overlay{
     transform: translateY(0%);
-       
 }
+
 .main-portfolio-overlay-container{
     position: relative;
     overflow: hidden;
@@ -383,6 +391,7 @@ body {
     padding: 10px 32px;
     border-radius: 4px;
     text-align: center;
+    border: none;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -403,7 +412,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    cursor: not-allowed;
    
     transition:opacity 250ms, visibility 250ms;
 }
@@ -426,10 +434,6 @@ body {
     min-width: 528px;
     min-height: 581px;
     background-color: #fff;
-
-
-   
-    
 
 }
 
@@ -798,3 +802,6 @@ body {
     height: 20px;
     fill: #fff;
 }
+
+
+
